@@ -1,94 +1,3 @@
-<!--
-    *** Instructions ***
-
-    File and Folder Setup
-In VS Code, open the wdd230 local repository folder.
-Create a new page in this root folder named "index.html".
-This is your course home page. You will maintain this page throughout the course with updates and links to activities and assignments.
-Create new folders (directories) named "styles", "scripts", and "images'.
-These sub-folders, on the repository root directory, will contain the relevant, asset files.
-Note that the words directory and folder have essentially the same meaning. Directory is the more accurate term for file systems while "folder" 📂 refers to the graphical metaphor that is generally accepted because it is highly related to the term file in the organized world.
-Add a CSS file named "base.css" to the styles directory. This is your main CSS file.
-Add a JS file named "getdates.js" to the scripts directory.
-
-HTML
-In the index.html document, include:
-the required document type definition,
-html tag with language attribute,
-the head tag, and
-the body tag.
-In the <head>, include the following:
-Refer to the course development standards if you need to review any of these <head> elements.
-the meta charset attribute,
-the meta viewport element,
-the title element,
-the meta description element, and
-the meta author element.
-Set the title content to "[Student Name] - WDD 230 - Web Frontend Development"
-Enter your own name in the [Student Name] placeholder.
-Phrase the meta description content to include these words:
-"WDD 230 - Web Frontend Development"
-Your full name
-"course assignment portal"
-Use other, relevant keywords to create a clear description. See the course development standards or conduct your own research if you are unclear about this required description content.
-
-In the <body>, create a layout using header, nav, main, and footer elements in that order.
-Include links in the navigation nav named "Home", "Site Plan", "Chamber", "BYU-Idaho", and "Scripture". Here are the required values of the href attributes for each:
-Home: #
-Site Plan: lesson03/chamber-site-plan.html
-Chamber: chamber/
-BYU-Idaho: Link to BYU-Idaho's home page and have this link open a new window/tab.
-Scripture: Link to https://www.churchofjesuschrist.org/study/scriptures and point to a specific favorite scripture of yours. Have this link open a new window/tab.
-The <header> element contains your optimized profile image img and your name in an h1 tag.
-The <main> element contains the following:
-A h2 tag with the words "WDD 230: Web Frontend Development".
-A section tag with the class attribute named "card" that contains the following:
-An h3 tag containing "Learning Activities" as text.
-An ul with list items li and anchors a for learning activities that will be populated throughout the the course.
-A second section with a class name of "card" that contains the following:
-An h3 tag containing "Information" as text.
-Information placeholders about the weather, number of visits to the page, etc.
-You do not need to program the weather or visits functionality at this point in the course.
-The <footer> has two paragraphs p:
-The first paragraph contains the following:
-The copyright symbol and current year where the year will be dynamically populated using JavaScript code.
-Your name.
-Your state or country (Adding the flag is optional.)
-The second paragraph has an id of "lastModified" and will be populated with JavaScript code.
-
-CSS
-Layout the page as shown in the given screenshot example.
-
-In the base.css file, style the page with your own color schema and typography choices.
-You are responsible to practice good design principles of alignment, color contrast, proximity, repetition, and consistent spacing in all of your work in this class.
-Use the Google Fonts API to select one or two fonts to use on the page.
-The main element has a limited width and is centered on the screen horizontally.
-Layout the main column cards using CSS Grid.
-Display the main sections in a single column at this point.
-Set the style type of the course links list to none (do not display bullets).
-Make additional CSS alterations as needed.
-
-JavaScript
-In your index.html document, reference the "getdates.js" file at the end of the document, right before the closing </body> tag.
-getdates.js contains the script for dynamically outputting:
-the copyright year (the current year) in the footer's first paragraph, and
-the date the document was last modified in the second paragraph.
-Use the lastModified property of the document object to get this date/time dynamically.
-You do not need to alter the document.lastModified native format.
-Testing
-
-Validate your HTML and CSS using the ⚙️ Web Developer Extension or an equivalent tool.
-Test your page in the latest version of your browser in responsive mode using the Inspect Device Toolbar (Dev Tools).Screenshot of console error icon in Dev Tools
-Check for JavaScript runtime errors in the console or click the red, error icon in the upper right corner of Dev Tools.
-Use this audit tool to self-check your work for some of the required HTML elements and CSS content.
-Use Dev Tools CSS Overview to check your color contrast.
-Generate the Dev Tools Lighthouse report and run diagnostics for Performance, Accessibility, Best Practices, and SEO in both the mobile and Desktop views.
-It is best to test your page in a Private or Incognito browser window.
-Submission
-Commit your local repository and push or upload your work to your GitHub Pages enabled repository on GitHub.
-Return to I-Learn and submit your home page URL.
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,28 +8,55 @@ Return to I-Learn and submit your home page URL.
         name="description"
         content="This is the course assignment portal for Michael Fink's WDD230 class." />
     <title>Michael Fink - WDD 230 - Web Frontend Development</title>
+    <link href="./styles/base.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-
+        <img src="./images/byuprofilepic.png" id="self-portrait" rel="Michael Fink"/>
+        <h1>Michael Fink</h1>
     </header>
 
     <nav>
         <ul>
-            <li href="#">Home</li>
-            <li>Site Plan</li>
-            <li>Chamber</li>
-            <li>BYU-Idaho</li>
-            <li>Scripture</li>
+            <li><a class="nav-link" href="#">Home</a></li>
+            <li><a class="nav-link" href="lesson03/chamber-site-plan.html">Site Plan</a></li>
+            <li><a class="nav-link" href="chamber/">Chamber</a></li>
+            <li><a class="nav-link" href="https://www.byui.edu/">BYU-Idaho</a></li>
+            <li><a class="nav-link" href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/46?lang=eng&id=p12#p12">Scripture</a></li>
         </ul>
     </nav>
 
     <main>
-
+        <h2 id="course-name">WDD 230: Web Frontend Development</h2>
+        <section class="card">
+            <h3>Learning Activities</h3>
+            <ol>
+                <li><a class="nav-link" href="week01/holygrail.html"><strong>Holy Layout</strong></a></li>
+                <li><a class="nav-link" href=""></a></li>
+                <li><a class="nav-link" href=""></a></li>
+                <li><a class="nav-link" href=""></a></li>
+                <li><a class="nav-link" href=""></a></li>
+                <li><a class="nav-link" href=""></a></li>
+                <li><a class="nav-link" href=""></a></li>
+                <li><a class="nav-link" href=""></a></li>
+                <li><a class="nav-link" href=""></a></li>
+                <li><a class="nav-link" href=""></a></li>
+                <li><a class="nav-link" href=""></a></li>
+            </ol>
+        </section>
+        <section class="card">
+            <h3>Information</h3>
+        </section>
     </main>
 
     <footer>
-
+        <p>&copy; current year  |   Michael Fink    |   USA</p>
+        <p id="lastModified"></p>
     </footer>
+
+    <script href="scripts/getdates.js"></script>
 </body>
 </html>

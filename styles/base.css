@@ -1,0 +1,62 @@
+body {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(23, 205, 81);
+    background-color: rgb(10, 10, 10);
+    display: grid;
+    grid-template: 200px auto 1fr 100px / 100%;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;    
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+    text-align: left;
+}
+  
+.nav-link {
+    color: whitesmoke;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+#self-portrait {
+    padding-right: 20px;
+    height: 180px;
+    width: auto;
+}
+
+nav {
+    background-color: rgb(15, 32, 20);
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.card {
+    background-color: rgb(15, 32, 20);
+    color: whitesmoke;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#lastModified {
+    color: whitesmoke;
+}
