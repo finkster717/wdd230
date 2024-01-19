@@ -44,6 +44,9 @@ ol {
 
 nav {
     background-color: rgb(15, 32, 20);
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
 }
